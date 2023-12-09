@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
-import Chat from "@/components/chat"
+import Chat from "tariq/components/chat"
 
 function App() {
   // const [count, setCount] = useState(0)

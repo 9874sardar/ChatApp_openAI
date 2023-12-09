@@ -4,12 +4,12 @@ import {
   MultiChatSocket,
   MultiChatWindow,
 } from "react-chat-engine-advanced";
-import Header from "@/components/customHeader"
+import Header from "tariq/components/customHeader"
 
 const Chat = () => {
-  const chatProps = use(
+  const chatProps = useMultiChatLogic(
     import.meta.env.VITE_PROJECT_ID,
-    "testuser",
+    "sardar",
     "1234"
   )
   return <div  style={{ flexBasis:"100%"}}>
