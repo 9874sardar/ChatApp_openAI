@@ -33,4 +33,7 @@ export default defineConfig({
 
 *-------------------------------------------------*
 
-30:18
+Blob URL || Object URL . why its used - It is used for the security of your privacy when we try to upload an image from our local machine .
+
+what is it - it is a encoded string type method , it wont upload the direct path and will return a encoded string after uploading .
+soo that server will not access our local storage with that image path.
