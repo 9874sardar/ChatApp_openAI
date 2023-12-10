@@ -37,3 +37,11 @@ Blob URL || Object URL . why its used - It is used for the security of your priv
 
 what is it - it is a encoded string type method , it wont upload the direct path and will return a encoded string after uploading .
 soo that server will not access our local storage with that image path.
+
+*-------------------------------------------------*
+
+import Dropzone from "react-dropzone";
+
+it basically accepts an image from the UI where we can upload or drag and drop the image to the webpage
+
+*-------------------------------------------------*

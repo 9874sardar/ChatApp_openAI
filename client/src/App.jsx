@@ -21,3 +21,4 @@ export default App
 // VITE_BASE_URL=http://localhost:1337
 // VITE_PROJECT_ID=f5989e08-d013-490b-9f47-1cba60ec210d
 // VITE_PROJECT_KEY=8172d49a-cfd0-4238-b24d-2fea2a553edf
+// VITE_OPENAI_KEY=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
