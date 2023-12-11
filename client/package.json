@@ -31,5 +31,10 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "vite": "^4.3.9"
-  }
+  },
+  "description": "creating a chat app with node , react and open AI's API which will automate and give suggestions and reply",
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
