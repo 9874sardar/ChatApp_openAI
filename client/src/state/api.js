@@ -12,6 +12,14 @@ export const pokemonApi = createApi({
             body: payload,
         })
       }),
+      postAiCode: builder.mutation({
+        query: (payload) => ({
+            url: "openai/code",
+            method: "POST",
+            body: payload,
+        })
+      }),
+
     }),
   })
-  export const { usePostAiTextMutation } = pokemonApi;
+  export const { usePostAiTextMutation,usePostAiCodeMutation } = pokemonApi;

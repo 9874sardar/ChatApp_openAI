@@ -48,7 +48,7 @@ it basically accepts an image from the UI where we can upload or drag and drop t
 
  const [trigger] = usePostAiTextMutation();
 
-    trigger is function that will trigger an actual call we need . 
+    trigger is the function that will trigger an actual call we need . 
 
     we will be able to trigger that call in our handlesubmit function 
 
@@ -57,6 +57,9 @@ it basically accepts an image from the UI where we can upload or drag and drop t
          trigger(form);
 
          with the help of trigger we are sending the form data to openai which is present in api . we are sending the payload to the url and in the body we have the form data
+
+
+    Redux toolkit  - https://redux-toolkit.js.org/rtk-query/overview
 
     *-------------------------------------------------*
 

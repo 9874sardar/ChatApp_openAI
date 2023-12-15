@@ -7,6 +7,7 @@ import {
 import Header from "tariq/components/customHeader"
 import StandardMessageForm from "tariq/components/customMessageForms/StandardMessageForm"
 import Ai from "../customMessageForms/Ai";
+import AiCode from "../customMessageForms/AiCode";
 
 const Chat = () => {
   const chatProps = useMultiChatLogic(
@@ -24,6 +25,10 @@ const Chat = () => {
         if(chatProps.chat?.title.startsWith("AiChat_")){
           // console.log("chatprop ",chatProps.chat.last_message.text)
           return <Ai props={props} activeChat={chatProps.chat} />
+        }
+        if(chatProps.chat?.title.startsWith("AiCode_")){
+          // console.log("chatprop ",chatProps.chat.last_message.text)
+          return <AiCode props={props} activeChat={chatProps.chat} />
         }
 
         return (
