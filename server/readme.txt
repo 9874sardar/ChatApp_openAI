@@ -9,3 +9,8 @@ packages we need
 
 *-------------------------------------------------*
 
+ To read about the openai configration follow up the link 
+ and look for all the features available their 
+ https://github.com/openai/openai-node
+
+*-------------------------------------------------*

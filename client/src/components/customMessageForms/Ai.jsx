@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import MessageFormUI from "./MessageFormUI";
+import { usePostAiTextMutation } from "tariq/state/api";
 
-const StandardMessageForm = ({ props, activeChat }) => {
+const Ai = ({ props, activeChat }) => {
+
   const [message, setMessage] = useState("");
   const [attachment, setAttachment] = useState("");
+  const [trigger] = usePostAiTextMutation();
 
   // console.log("props ",props);
   // console.log("activeChat ",activeChat);
@@ -26,6 +29,7 @@ const StandardMessageForm = ({ props, activeChat }) => {
     
     
     props.onSubmit(form);
+    trigger(form);
     setMessage("");
     setAttachment("");
   };
@@ -34,12 +38,12 @@ const StandardMessageForm = ({ props, activeChat }) => {
   
   return (
     <MessageFormUI 
-      setAttachment={setAttachment}
-      message={message}
-      handleChange={handleChange}
-      handleSubmit={handleSubmit}
-    />
-  );
-};
+    setAttachment={setAttachment}
+    message={message}
+    handleChange={handleChange}
+    handleSubmit={handleSubmit}
+  />
+  )
+}
 
-export default StandardMessageForm;
+export default Ai
