@@ -18,6 +18,10 @@ router.post("/text", async (req,res) =>{
         //migartion from old openai to new 1 gpt-3.5 to gpt-4
         // https://github.com/openai/openai-node/discussions/217
 
+
+        //creating a openai completion here where we are using the version of openai api as model 
+        // and we are sending our message in place of messages.content . and we will get a reply on reponse within in
+        // we will have choices as an array and then the message of openai api
         const response = await openai.chat.completions.create({
           "model":"gpt-3.5-turbo",
           "messages":[
@@ -30,6 +34,8 @@ router.post("/text", async (req,res) =>{
 
           console.log("response : ",response.choices[0].message )
 
+          // we are sending the message reponse send by the openai and we will send it to the chatengine where we will display the 
+          // response as a Bot via process.env.BOT_USER_NAME to the user interface as a chat bot
           await axios.post(
             `https://api.chatengine.io/chats/${actvChatId}/messages/`,
             { text : response.choices[0].message.content},
